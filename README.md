@@ -1,7 +1,4 @@
--- Create an admin account manually.
--- Replace the placeholder values with your own credentials.
-INSERT INTO users(name, email, password, role)
-VALUES ('Admin', 'your-email@example.com', 'your-password', 'ADMIN');# Job Application Tracking System
+# Job Application Tracking System
 
 Stack:
 - Java 17
