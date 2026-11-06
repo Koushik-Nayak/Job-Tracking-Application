@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body.my-applications-page {
+    min-height: 100vh;
+    padding: 50px 5% 70px;
+
+    font-family: 'Inter', Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at 85% 8%, rgba(95, 220, 230, 0.18), transparent 28%),
+        radial-gradient(circle at 10% 85%, rgba(184, 248, 121, 0.10), transparent 25%),
+        #032f35;
+
+    color: #ffffff;
+
+    overflow-x: auto;
+}
+
+
+/* Top label */
+
+body.my-applications-page::before {
+    content: "APPLICATION TRACKING";
+
+    display: block;
+    margin-bottom: 30px;
+
+    color: #78dce7;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+
+/* Main heading */
+
+body.my-applications-page h2 {
+    margin-bottom: 30px;
+
+    font-size: clamp(45px, 6vw, 70px);
+    line-height: 0.98;
+    font-weight: 800;
+    letter-spacing: -4px;
+
+    background: linear-gradient(
+        100deg,
+        #ffffff 15%,
+        #8ee5eb 65%,
+        #b8f879
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Filter form */
+
+body.my-applications-page .filter-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 32px;
+}
+
+
+/* Filter select */
+
+body.my-applications-page .filter-form select {
+    min-width: 170px;
+
+    padding: 13px 16px;
+
+    border: 1px solid rgba(120, 220, 231, 0.25);
+    border-radius: 13px;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.055);
+
+    color: #ffffff;
+
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* Select options */
+
+body.my-applications-page .filter-form select option {
+    background: #06373d;
+    color: #ffffff;
+}
+
+
+/* Filter focus */
+
+body.my-applications-page .filter-form select:focus {
+    border-color: #78dce7;
+
+    box-shadow:
+        0 0 0 3px rgba(120, 220, 231, 0.10);
+}
+
+
+/* Filter button */
+
+body.my-applications-page .filter-form button {
+    padding: 13px 23px;
+
+    border: none;
+    border-radius: 13px;
+
+    background: linear-gradient(
+        100deg,
+        #78dce7,
+        #b8f879
+    );
+
+    color: #123438;
+
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        filter 0.25s ease;
+}
+
+
+/* Filter hover */
+
+body.my-applications-page .filter-form button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(120, 220, 231, 0.18);
+
+    filter: brightness(1.05);
+}
+
+
+/* Table */
+
+body.my-applications-page table {
+    width: 100%;
+    min-width: 1050px;
+
+    border-collapse: separate;
+    border-spacing: 0 9px;
+
+    font-size: 13px;
+}
+
+
+/* Table headers */
+
+body.my-applications-page th {
+    padding: 13px 15px;
+
+    color: #78dce7;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+}
+
+
+/* Table rows */
+
+body.my-applications-page tr:not(:first-child) {
+    background: rgba(255, 255, 255, 0.055);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Rounded row corners */
+
+body.my-applications-page tr:not(:first-child) td:first-child {
+    border-radius: 15px 0 0 15px;
+}
+
+body.my-applications-page tr:not(:first-child) td:last-child {
+    border-radius: 0 15px 15px 0;
+}
+
+
+/* Cells */
+
+body.my-applications-page td {
+    padding: 18px 15px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.055);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+
+    color: #cfe5e7;
+
+    vertical-align: middle;
+
+    line-height: 1.5;
+}
+
+
+/* Job title */
+
+body.my-applications-page td:first-child {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+
+/* Company */
+
+body.my-applications-page td:nth-child(2) {
+    color: #9fdce2;
+    font-weight: 600;
+}
+
+
+/* Application status */
+
+body.my-applications-page .application-status {
+    display: table-cell;
+
+    color: #b8f879;
+
+    font-weight: 800;
+}
+
+
+/* Notes */
+
+body.my-applications-page td:nth-child(7) {
+    max-width: 250px;
+
+    color: #b6d0d3;
+}
+
+
+/* Row hover */
+
+body.my-applications-page tr:not(:first-child):hover {
+    transform: translateY(-2px);
+
+    background: rgba(120, 220, 231, 0.075);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+body.my-applications-page tr:not(:first-child):hover td {
+    border-top-color: rgba(120, 220, 231, 0.18);
+    border-bottom-color: rgba(120, 220, 231, 0.18);
+}
+
+
+/* Available badge */
+
+body.my-applications-page .job-available {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 7px 12px;
+
+    border: 1px solid rgba(184, 248, 121, 0.30);
+    border-radius: 20px;
+
+    background: rgba(184, 248, 121, 0.08);
+
+    color: #b8f879;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+/* Green dot */
+
+body.my-applications-page .job-available::before {
+    content: "";
+
+    width: 6px;
+    height: 6px;
+
+    margin-right: 7px;
+
+    border-radius: 50%;
+
+    background: #b8f879;
+}
+
+
+/* Closed badge */
+
+body.my-applications-page .job-closed {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 7px 12px;
+
+    border: 1px solid rgba(255, 110, 110, 0.28);
+    border-radius: 20px;
+
+    background: rgba(255, 80, 80, 0.08);
+
+    color: #ff9999;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+/* Red dot */
+
+body.my-applications-page .job-closed::before {
+    content: "";
+
+    width: 6px;
+    height: 6px;
+
+    margin-right: 7px;
+
+    border-radius: 50%;
+
+    background: #ff7777;
+}
+
+
+/* Bottom links */
+
+body.my-applications-page .bottom-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 40px;
+}
+
+
+/* Navigation buttons */
+
+body.my-applications-page .bottom-links a {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 13px 20px;
+
+    border: 1px solid rgba(120, 220, 231, 0.25);
+    border-radius: 30px;
+
+    background: rgba(120, 220, 231, 0.07);
+
+    color: #8ee5eb;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+/* Dashboard icon */
+
+body.my-applications-page .bottom-links a:first-child::before {
+    content: "⌂";
+    margin-right: 7px;
+    font-size: 16px;
+}
+
+
+/* Browse Jobs icon */
+
+body.my-applications-page .bottom-links a:nth-child(2)::before {
+    content: "⌕";
+    margin-right: 7px;
+    font-size: 17px;
+}
+
+
+/* Normal link hover */
+
+body.my-applications-page .bottom-links a:not(.logout-link):hover {
+    transform: translateY(-2px);
+
+    background: #78dce7;
+    border-color: #78dce7;
+
+    color: #123438;
+}
+
+
+/* Logout */
+
+body.my-applications-page .bottom-links .logout-link {
+    border-color: rgba(184, 248, 121, 0.28);
+
+    background: rgba(184, 248, 121, 0.07);
+
+    color: #b8f879;
+}
+
+body.my-applications-page .bottom-links .logout-link::before {
+    content: "↪";
+    margin-right: 7px;
+    font-size: 15px;
+}
+
+body.my-applications-page .bottom-links .logout-link:hover {
+    transform: translateY(-2px);
+
+    background: #b8f879;
+    border-color: #b8f879;
+
+    color: #17351d;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    body.my-applications-page {
+        padding: 35px 20px 55px;
+    }
+
+    body.my-applications-page::before {
+        margin-bottom: 25px;
+
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    body.my-applications-page h2 {
+        font-size: 48px;
+        letter-spacing: -3px;
+    }
+
+    body.my-applications-page .filter-form {
+        width: 100%;
+    }
+
+    body.my-applications-page .filter-form select {
+        flex: 1;
+    }
+
+    body.my-applications-page table {
+        min-width: 1050px;
+    }
+}
+
+
+/* Small phones */
+
+@media (max-width: 500px) {
+
+    body.my-applications-page {
+        padding: 30px 16px 45px;
+    }
+
+    body.my-applications-page h2 {
+        font-size: 41px;
+        letter-spacing: -2px;
+    }
+
+    body.my-applications-page .filter-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    body.my-applications-page .filter-form select,
+    body.my-applications-page .filter-form button {
+        width: 100%;
+    }
+
+    body.my-applications-page .bottom-links {
+        flex-direction: column;
+    }
+
+    body.my-applications-page .bottom-links a {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body.application-page {
+    min-height: 100vh;
+    padding: 50px 6% 70px;
+    font-family: 'Inter', Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at 85% 10%, rgba(95, 220, 230, 0.18), transparent 28%),
+        radial-gradient(circle at 10% 85%, rgba(184, 248, 121, 0.10), transparent 25%),
+        #032f35;
+
+    color: #ffffff;
+}
+
+
+/* Small top label */
+
+body.application-page::before {
+    content: "JOB TRACKING SYSTEM";
+
+    display: block;
+    margin-bottom: 35px;
+
+    color: #78dce7;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+
+/* Page heading */
+
+body.application-page h2 {
+    margin-bottom: 40px;
+
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -3px;
+
+    background: linear-gradient(
+        100deg,
+        #ffffff 20%,
+        #8ee5eb 65%,
+        #b8f879
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Table wrapper effect */
+
+body.application-page table {
+    width: 100%;
+    min-width: 850px;
+
+    border-collapse: separate;
+    border-spacing: 0 10px;
+
+    font-size: 14px;
+}
+
+
+/* Table header */
+
+body.application-page th {
+    padding: 15px 18px;
+
+    color: #79dce6;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+
+    text-align: left;
+}
+
+
+/* Table rows */
+
+body.application-page tr:not(:first-child) {
+    background: rgba(255, 255, 255, 0.055);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Rounded row edges */
+
+body.application-page tr:not(:first-child) td:first-child {
+    border-radius: 16px 0 0 16px;
+}
+
+body.application-page tr:not(:first-child) td:last-child {
+    border-radius: 0 16px 16px 0;
+}
+
+
+/* Table cells */
+
+body.application-page td {
+    padding: 20px 18px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+    color: #d9ebed;
+    vertical-align: middle;
+}
+
+
+/* Hover row */
+
+body.application-page tr:not(:first-child):hover {
+    transform: translateY(-2px);
+
+    background: rgba(120, 220, 231, 0.08);
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+body.application-page tr:not(:first-child):hover td {
+    border-top-color: rgba(120, 220, 231, 0.20);
+    border-bottom-color: rgba(120, 220, 231, 0.20);
+}
+
+
+/* Candidate name */
+
+body.application-page td:first-child {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+
+/* Email */
+
+body.application-page td:nth-child(2) {
+    color: #9fdce2;
+}
+
+
+/* Status */
+
+body.application-page td:nth-child(4) {
+    color: #b8f879;
+    font-weight: 700;
+}
+
+
+/* Interview date */
+
+body.application-page td:nth-child(5) {
+    color: #dcecef;
+}
+
+
+/* Update button */
+
+body.application-page .update-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 18px;
+
+    border: 1px solid rgba(120, 220, 231, 0.35);
+    border-radius: 30px;
+
+    background: rgba(120, 220, 231, 0.10);
+
+    color: #8ee5eb;
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+body.application-page .update-link::after {
+    content: " →";
+    font-size: 15px;
+}
+
+body.application-page .update-link:hover {
+    transform: translateY(-2px);
+
+    background: #b8f879;
+    border-color: #b8f879;
+
+    color: #17351d;
+
+    box-shadow: 0 8px 25px rgba(184, 248, 121, 0.18);
+}
+
+
+/* Mobile / small screens */
+
+@media (max-width: 950px) {
+
+    body.application-page {
+        padding: 35px 20px 55px;
+        overflow-x: auto;
+    }
+
+    body.application-page h2 {
+        font-size: 45px;
+        letter-spacing: -2.5px;
+    }
+
+    body.application-page table {
+        min-width: 850px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    body.application-page {
+        padding: 30px 16px 50px;
+    }
+
+    body.application-page::before {
+        margin-bottom: 30px;
+
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    body.application-page h2 {
+        font-size: 38px;
+        margin-bottom: 30px;
+    }
+
+    body.application-page th {
+        padding: 12px;
+    }
+
+    body.application-page td {
+        padding: 16px 12px;
+    }
+}

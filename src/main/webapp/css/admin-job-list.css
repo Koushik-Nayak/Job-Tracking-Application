@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body.job-page {
+    min-height: 100vh;
+    padding: 45px 6% 60px;
+
+    font-family: 'Inter', Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 88% 5%,
+            rgba(94, 220, 230, 0.17),
+            transparent 27%
+        ),
+        radial-gradient(
+            circle at 8% 90%,
+            rgba(184, 248, 121, 0.08),
+            transparent 25%
+        ),
+        #032f35;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   PAGE HEADER
+   ========================================= */
+
+body.job-page h2 {
+    margin: 15px 0 35px;
+
+    font-size: clamp(45px, 6vw, 78px);
+    line-height: 0.95;
+
+    font-weight: 800;
+    letter-spacing: -4px;
+
+    background: linear-gradient(
+        100deg,
+        #ffffff 15%,
+        #8ee5eb 65%,
+        #b8f879
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================================
+   ADD JOB SECTION
+   ========================================= */
+
+.job-top {
+    margin-bottom: 30px;
+}
+
+.add-job {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 13px 22px;
+
+    border-radius: 30px;
+
+    background: #b8f879;
+    color: #17351d;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    transition: 0.25s ease;
+}
+
+.add-job::before {
+    content: "+";
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.add-job:hover {
+    background: #c8ff98;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(184, 248, 121, 0.18);
+}
+
+
+/* =========================================
+   TABLE CONTAINER EFFECT
+   ========================================= */
+
+body.job-page table {
+    width: 100%;
+
+    border-collapse: separate;
+    border-spacing: 0 8px;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   TABLE HEADER
+   ========================================= */
+
+body.job-page th {
+    padding: 14px 15px;
+
+    text-align: left;
+
+    color: #8faeb1;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   TABLE ROWS
+   ========================================= */
+
+body.job-page tbody tr {
+    transition: 0.2s ease;
+}
+
+body.job-page td {
+    padding: 18px 15px;
+
+    background: rgba(255, 255, 255, 0.055);
+
+    color: #d8e8e9;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+
+    vertical-align: middle;
+}
+
+
+/* Rounded first and last cells */
+
+body.job-page td:first-child {
+    border-left: 1px solid rgba(255, 255, 255, 0.04);
+
+    border-radius: 15px 0 0 15px;
+}
+
+body.job-page td:last-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.04);
+
+    border-radius: 0 15px 15px 0;
+}
+
+
+/* Row hover */
+
+body.job-page tr:hover td {
+    background: rgba(120, 220, 231, 0.075);
+
+    border-color: rgba(120, 220, 231, 0.12);
+}
+
+
+/* =========================================
+   JOB TITLE
+   ========================================= */
+
+body.job-page td:nth-child(2) {
+    color: #ffffff;
+
+    font-weight: 700;
+
+    min-width: 170px;
+}
+
+
+/* Company */
+
+body.job-page td:nth-child(3) {
+    color: #a9e4e9;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   ACTIONS
+   ========================================= */
+
+.actions {
+    white-space: nowrap;
+}
+
+.actions a {
+    display: inline-block;
+
+    margin-right: 5px;
+    padding: 8px 12px;
+
+    border-radius: 20px;
+
+    background: rgba(120, 220, 231, 0.09);
+
+    color: #8ce2e9;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    transition: 0.2s ease;
+}
+
+.actions a:hover {
+    background: #78dce7;
+
+    color: #06343a;
+
+    transform: translateY(-2px);
+}
+
+
+/* Delete button */
+
+.actions .delete-link {
+    background: rgba(255, 90, 90, 0.08);
+
+    color: #ff9e9e;
+}
+
+.actions .delete-link:hover {
+    background: #ff7777;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   APPLICATION BUTTON
+   ========================================= */
+
+.application-link {
+    display: inline-block;
+
+    padding: 9px 14px;
+
+    border-radius: 22px;
+
+    background: rgba(184, 248, 121, 0.10);
+
+    color: #b8f879;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition: 0.2s ease;
+}
+
+.application-link:hover {
+    background: #b8f879;
+
+    color: #17351d;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   NO JOBS
+   ========================================= */
+
+.no-jobs {
+    padding: 45px !important;
+
+    text-align: center !important;
+
+    color: #8faeb1 !important;
+
+    font-size: 15px;
+
+    border-radius: 15px;
+}
+
+
+/* =========================================
+   BOTTOM LINKS
+   ========================================= */
+
+.bottom-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 35px;
+}
+
+.bottom-links a {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 13px 21px;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+
+    border-radius: 30px;
+
+    color: #d8eeee;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.25s ease;
+}
+
+.bottom-links a:hover {
+    border-color: rgba(120, 220, 231, 0.4);
+
+    background: rgba(120, 220, 231, 0.08);
+
+    transform: translateY(-2px);
+}
+
+
+/* Logout */
+
+.bottom-links .logout-link {
+    background: #b8f879;
+
+    color: #17351d;
+
+    border: none;
+
+    font-weight: 800;
+}
+
+.bottom-links .logout-link:hover {
+    background: #c8ff98;
+
+    color: #17351d;
+}
+
+
+/* =========================================
+   RESPONSIVE TABLE
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+    body.job-page {
+        padding: 40px 25px;
+        overflow-x: auto;
+    }
+
+    body.job-page table {
+        min-width: 950px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    body.job-page {
+        padding: 30px 18px 45px;
+    }
+
+    body.job-page h2 {
+        font-size: 48px;
+        letter-spacing: -3px;
+    }
+
+    .bottom-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

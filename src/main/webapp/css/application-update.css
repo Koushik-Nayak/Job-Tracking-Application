@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body.application-update-page {
+    min-height: 100vh;
+    padding: 50px 7% 70px;
+
+    font-family: 'Inter', Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at 85% 10%, rgba(95, 220, 230, 0.18), transparent 28%),
+        radial-gradient(circle at 10% 85%, rgba(184, 248, 121, 0.10), transparent 25%),
+        #032f35;
+
+    color: #ffffff;
+}
+
+
+/* Top label */
+
+body.application-update-page::before {
+    content: "APPLICATION MANAGEMENT";
+
+    display: block;
+    margin-bottom: 35px;
+
+    color: #78dce7;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+
+/* Main heading */
+
+body.application-update-page h2 {
+    margin-bottom: 35px;
+
+    font-size: clamp(45px, 6vw, 72px);
+    line-height: 0.98;
+    font-weight: 800;
+    letter-spacing: -4px;
+
+    background: linear-gradient(
+        100deg,
+        #ffffff 15%,
+        #8ee5eb 65%,
+        #b8f879
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Candidate + Job information */
+
+body.application-update-page .application-info {
+    width: 100%;
+    max-width: 700px;
+
+    margin-bottom: 28px;
+    padding: 24px 28px;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.055);
+
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+
+/* Info paragraphs */
+
+body.application-update-page .application-info p {
+    margin-bottom: 12px;
+
+    color: #cfe5e7;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+body.application-update-page .application-info p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Strong labels */
+
+body.application-update-page .application-info strong {
+    display: inline-block;
+    min-width: 90px;
+
+    color: #78dce7;
+    font-weight: 700;
+}
+
+
+/* Form */
+
+body.application-update-page form {
+    width: 100%;
+    max-width: 700px;
+
+    padding: 32px;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, 0.055);
+
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.20);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+
+/* Labels */
+
+body.application-update-page form label {
+    display: block;
+
+    margin-bottom: 9px;
+    margin-top: 22px;
+
+    color: #dff2f3;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+body.application-update-page form label:first-child {
+    margin-top: 0;
+}
+
+
+/* Select, input and textarea */
+
+body.application-update-page form select,
+body.application-update-page form input,
+body.application-update-page form textarea {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 13px;
+
+    outline: none;
+
+    background: rgba(0, 35, 40, 0.75);
+
+    color: #ffffff;
+
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 14px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* Select */
+
+body.application-update-page form select {
+    cursor: pointer;
+}
+
+
+/* Textarea */
+
+body.application-update-page form textarea {
+    min-height: 130px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+/* Placeholder */
+
+body.application-update-page form input::placeholder,
+body.application-update-page form textarea::placeholder {
+    color: #7da3a7;
+}
+
+
+/* Focus */
+
+body.application-update-page form select:focus,
+body.application-update-page form input:focus,
+body.application-update-page form textarea:focus {
+    border-color: #78dce7;
+
+    background: rgba(0, 45, 51, 0.90);
+
+    box-shadow:
+        0 0 0 3px rgba(120, 220, 231, 0.10),
+        0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Update button */
+
+body.application-update-page form button {
+    width: 100%;
+
+    margin-top: 30px;
+    padding: 16px 24px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        100deg,
+        #78dce7,
+        #b8f879
+    );
+
+    color: #123438;
+
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow: 0 12px 30px rgba(120, 220, 231, 0.12);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        filter 0.25s ease;
+}
+
+
+/* Button hover */
+
+body.application-update-page form button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(120, 220, 231, 0.20);
+
+    filter: brightness(1.05);
+}
+
+
+/* Button click */
+
+body.application-update-page form button:active {
+    transform: translateY(-1px);
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    body.application-update-page {
+        padding: 35px 20px 55px;
+    }
+
+    body.application-update-page::before {
+        margin-bottom: 30px;
+
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    body.application-update-page h2 {
+        margin-bottom: 28px;
+
+        font-size: 48px;
+        letter-spacing: -3px;
+    }
+
+    body.application-update-page .application-info {
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    body.application-update-page form {
+        padding: 24px 20px;
+        border-radius: 20px;
+    }
+}
+
+
+/* Small phones */
+
+@media (max-width: 400px) {
+
+    body.application-update-page {
+        padding: 30px 16px 45px;
+    }
+
+    body.application-update-page h2 {
+        font-size: 40px;
+    }
+
+    body.application-update-page .application-info strong {
+        min-width: 75px;
+    }
+
+    body.application-update-page form {
+        padding: 20px 16px;
+    }
+}

@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Inter', Arial, sans-serif;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(90, 220, 230, 0.18), transparent 28%),
+        radial-gradient(circle at 85% 80%, rgba(184, 248, 121, 0.12), transparent 28%),
+        #032f35;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #ffffff;
+    padding: 30px;
+}
+
+/* Decorative glow */
+body::before {
+    content: "";
+    position: fixed;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: rgba(86, 218, 228, 0.08);
+    filter: blur(80px);
+    top: -120px;
+    right: -100px;
+    pointer-events: none;
+}
+
+/* Main heading */
+h2 {
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 35px;
+    text-align: center;
+    line-height: 1.1;
+}
+
+/* Highlight part of heading */
+h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 5px;
+    margin: 15px auto 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #78dce7, #b8f879);
+}
+
+/* Error and success messages */
+body > p {
+    width: 420px;
+    max-width: 100%;
+    padding: 13px 17px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Error */
+body > p[style*="red"] {
+    background: rgba(255, 80, 80, 0.10);
+    border: 1px solid rgba(255, 100, 100, 0.25);
+    color: #ffaaaa !important;
+}
+
+/* Success */
+body > p[style*="green"] {
+    background: rgba(100, 255, 170, 0.10);
+    border: 1px solid rgba(100, 255, 170, 0.22);
+    color: #a9f5c8 !important;
+}
+
+/* Login form */
+form {
+    width: 420px;
+    max-width: 100%;
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.075);
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 28px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+    font-size: 13px;
+    color: #b8ccce;
+}
+
+/* Labels are actually plain text in your JSP,
+   so this gives the spacing needed around them */
+form input {
+    display: block;
+    width: 100%;
+
+    margin-top: 9px;
+    margin-bottom: 22px;
+
+    padding: 15px 17px;
+
+    border-radius: 13px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    background: rgba(255, 255, 255, 0.07);
+
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.25s ease;
+}
+
+/* Input focus */
+form input:focus {
+    border-color: #78dce7;
+    background: rgba(255, 255, 255, 0.10);
+
+    box-shadow:
+        0 0 0 3px rgba(120, 220, 231, 0.10),
+        0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+/* Placeholder */
+form input::placeholder {
+    color: #789598;
+}
+
+/* Login button */
+form button {
+    width: 100%;
+    padding: 15px 20px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        100deg,
+        #78dce7,
+        #b8f879
+    );
+
+    color: #07343a;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+form button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(120, 220, 231, 0.20);
+}
+
+form button:active {
+    transform: translateY(-1px);
+}
+
+/* Create account */
+body > a {
+    margin-top: 5px;
+
+    color: #8ce3eb;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+body > a:hover {
+    color: #b8f879;
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+
+    body {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 34px;
+    }
+
+    form {
+        padding: 28px 22px;
+        border-radius: 22px;
+    }
+
+    body > p {
+        width: 100%;
+    }
+}

@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body.admin-dashboard {
+    min-height: 100vh;
+    padding: 40px 7% 60px;
+
+    font-family: 'Inter', Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 85% 10%,
+            rgba(95, 220, 230, 0.18),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 10% 85%,
+            rgba(184, 248, 121, 0.10),
+            transparent 25%
+        ),
+        #032f35;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   TOP SMALL BRAND TEXT
+   ========================================= */
+
+body.admin-dashboard::before {
+    content: "JOB TRACKING SYSTEM";
+
+    display: block;
+
+    margin-bottom: 55px;
+
+    color: #78dce7;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+}
+
+
+/* =========================================
+   MAIN HEADING
+   ========================================= */
+
+body.admin-dashboard h2 {
+    margin-bottom: 45px;
+
+    max-width: 900px;
+
+    font-size: clamp(48px, 7vw, 88px);
+    line-height: 0.95;
+
+    font-weight: 800;
+
+    letter-spacing: -5px;
+
+    background: linear-gradient(
+        100deg,
+        #ffffff 15%,
+        #91e5eb 65%,
+        #b8f879 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================================
+   DASHBOARD LINKS
+   ========================================= */
+
+body.admin-dashboard a {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 650px;
+
+    margin-bottom: 14px;
+
+    padding: 21px 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.055);
+
+    color: #e0f0f1;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================
+   ARROW
+   ========================================= */
+
+body.admin-dashboard a::after {
+    content: "→";
+
+    font-size: 22px;
+
+    color: #78dce7;
+
+    transition: transform 0.25s ease;
+}
+
+
+/* =========================================
+   HOVER EFFECT
+   ========================================= */
+
+body.admin-dashboard a:hover {
+    transform: translateX(7px);
+
+    background: rgba(120, 220, 231, 0.10);
+
+    border-color: rgba(120, 220, 231, 0.40);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.20);
+}
+
+body.admin-dashboard a:hover::after {
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   LOGOUT BUTTON
+   ========================================= */
+
+body.admin-dashboard a:last-of-type {
+    display: inline-flex;
+
+    width: auto;
+    max-width: none;
+
+    margin-top: 25px;
+
+    padding: 14px 28px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #b8f879;
+
+    color: #17351d;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    box-shadow: none;
+}
+
+
+/* Remove arrow from logout */
+
+body.admin-dashboard a:last-of-type::after {
+    content: "";
+}
+
+
+/* Logout hover */
+
+body.admin-dashboard a:last-of-type:hover {
+    background: #c8ff98;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(184, 248, 121, 0.18);
+}
+
+
+/* =========================================
+   REMOVE BR TAG SPACING
+   ========================================= */
+
+body.admin-dashboard br {
+    display: none;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    body.admin-dashboard {
+        padding: 30px 20px 50px;
+    }
+
+    body.admin-dashboard::before {
+        margin-bottom: 45px;
+
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    body.admin-dashboard h2 {
+        margin-bottom: 35px;
+
+        font-size: 52px;
+
+        letter-spacing: -3px;
+    }
+
+    body.admin-dashboard a {
+        max-width: 100%;
+
+        padding: 18px 20px;
+
+        font-size: 14px;
+    }
+
+    body.admin-dashboard a:last-of-type {
+        padding: 13px 25px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 400px) {
+
+    body.admin-dashboard h2 {
+        font-size: 43px;
+    }
+
+    body.admin-dashboard a {
+        padding: 16px 17px;
+    }
+}
