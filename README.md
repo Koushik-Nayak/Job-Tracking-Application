@@ -1,4 +1,7 @@
-# Job Application Tracking System
+-- Create an admin account manually.
+-- Replace the placeholder values with your own credentials.
+INSERT INTO users(name, email, password, role)
+VALUES ('Admin', 'your-email@example.com', 'your-password', 'ADMIN');# Job Application Tracking System
 
 Stack:
 - Java 17
@@ -29,8 +32,11 @@ src/main/resources/META-INF/persistence.xml
 
 Example admin SQL:
 
+-- Create an admin account manually.
+-- Replace the placeholder values with your own credentials.
 INSERT INTO users(name, email, password, role)
-VALUES ('Admin', 'admin@gmail.com', 'admin123', 'ADMIN');
+VALUES ('Admin', 'your-email@example.com', 'your-password', 'ADMIN');
+
 
 ## Main workflow
 1. Admin logs in.
